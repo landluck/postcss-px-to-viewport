@@ -32,7 +32,9 @@ module.exports = postcss.plugin('postcss-px-to-viewport', function (options) {
 
     css.walkDecls(function (decl, i) {
       // 添加配置，忽略默认文件夹
-      if (options.exclude && options.exclude.test(decl.source.input.file)) return
+      if (options.exclude && checkType(options.exclude)) {
+        if (options.exclude.test(decl.source.input.file)) return
+      }
       // This should be the fastest test and will remove most declarations
       if (decl.value.indexOf(opts.unitToConvert) === -1) return;
 
@@ -52,6 +54,10 @@ module.exports = postcss.plugin('postcss-px-to-viewport', function (options) {
 
   };
 });
+
+function checkType (reg) {
+  return Object.prototype.toString.call(reg) === '[object RegExp]'
+}
 
 function getUnit(prop, opts) {
   return prop.indexOf('font') === -1 ? opts.viewportUnit : opts.fontViewportUnit;
