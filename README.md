@@ -1,4 +1,4 @@
-# postcss-px-to-viewport [![NPM version](https://badge.fury.io/js/postcss-px-to-viewport.svg)](http://badge.fury.io/js/postcss-px-to-viewport)
+# postcss-px-viewport [![NPM version](https://badge.fury.io/js/postcss-px-viewport.svg)](http://badge.fury.io/js/postcss-px-viewport)
 
 A plugin for [PostCSS](https://github.com/ai/postcss) that generates viewport units (vw, vh, vmin, vmax) from pixel units.
 
@@ -91,6 +91,7 @@ Default:
   viewportWidth: 320,
   viewportHeight: 568, // not now used; TODO: need for different units and math for different properties
   unitPrecision: 5,
+  exclude: /node_modules/,
   viewportUnit: 'vw',
   fontViewportUnit: 'vw',  // vmin is more suitable.
   selectorBlackList: [],
@@ -101,6 +102,7 @@ Default:
 - `unitToConvert` (String) unit to convert, by default, it is px.
 - `viewportWidth` (Number) The width of the viewport.
 - `viewportHeight` (Number) The height of the viewport.
+- `exclude` (RegExp) exclude some dir.
 - `unitPrecision` (Number) The decimal numbers to allow the REM units to grow to.
 - `viewportUnit` (String) Expected units.
 - `fontViewportUnit` (String) Expected units for font.
