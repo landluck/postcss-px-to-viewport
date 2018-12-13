@@ -101,6 +101,7 @@ Default:
 - `unitToConvert` (String) unit to convert, by default, it is px.
 - `viewportWidth` (Number) The width of the viewport.
 - `viewportHeight` (Number) The height of the viewport.
+- `exclude` (RegExp) exclude some dir.
 - `unitPrecision` (Number) The decimal numbers to allow the REM units to grow to.
 - `viewportUnit` (String) Expected units.
 - `fontViewportUnit` (String) Expected units for font.
