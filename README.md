@@ -91,6 +91,7 @@ Default:
   viewportWidth: 320,
   viewportHeight: 568, // not now used; TODO: need for different units and math for different properties
   unitPrecision: 5,
+  exclude: /node_modules/,
   viewportUnit: 'vw',
   fontViewportUnit: 'vw',  // vmin is more suitable.
   selectorBlackList: [],
